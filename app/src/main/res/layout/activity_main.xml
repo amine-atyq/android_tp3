@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/communicationActivityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CommunicationActivity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:gravity="center"
+        android:background="#8A2BE2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMessageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre Message:"
+        app:layout_constraintTop_toBottomOf="@id/communicationActivityTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/edtMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="message"
+        app:layout_constraintTop_toTopOf="@id/textViewMessageLabel"
+        app:layout_constraintBottom_toBottomOf="@id/textViewMessageLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewMessageLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/buttonExample1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GO TO EXAMPLE1 ACTIVITY"
+        android:backgroundTint="#32BAC5"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/btnActivity2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GO TO EXAMPLE2 ACTIVITY"
+        android:backgroundTint="#32BAC5"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/buttonExample1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnImplicitIntent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TEST IMPLICIT INTENT"
+        android:onClick="TestImplicit"
+        android:backgroundTint="#32BAC5"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnActivity2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReturnResultActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CommunicationActivity"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:gravity="center"
+        android:background="#8A2BE2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+
+
+    <!-- Changed the id to textViewMessage to match the Java code -->
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Assuming edtMessageBack is the EditText you want the user to type their message into -->
+    <EditText
+        android:id="@+id/edtMessageBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Message retourné"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnBackOK"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BACK OK"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtMessageBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel"
+        app:layout_constraintWidth_default="wrap"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BACK CANCEL"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtMessageBack"
+        app:layout_constraintStart_toEndOf="@id/btnBackOK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_default="wrap"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
